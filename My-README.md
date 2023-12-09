@@ -73,7 +73,7 @@ hadoop fs -getmerge hdfs://namenode:8020/user/root/kafka_data/ kafka-test.json
 ```
 - Yêu cầu: 2 máy chung mạng LAN (bởi vì 1 máy yếu quá không chạy được)
 - Máy 1: Chạy các container bằng docker-compose up -d (ngoại trừ elasticsearch và kibana)
-- Máy 2: Chạy container elasticsearch và kibana
+- Máy 2: Chạy container elasticsearch và kibana (sau khi chạy elasticsearch và kibana thì chạy py mapping.py)
 - Kết quả: Data sẽ được vnstock -> crawl từ my_python_app -> kafka -> spark -> hadoop & elasticsearch -> kibana (visualize)
 ```
 
